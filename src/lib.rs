@@ -69,15 +69,6 @@ mod tests {
     use super::*;
 
     #[test]
-    fn config_new() {
-        let args = vec![String::from("appname"), String::from("foo"), String::from("bar")];
-        let config = Config::new(env::args()).unwrap();
-
-        assert_eq!(config.pattern, args[1]);
-        assert_eq!(config.filename, args[2]);
-    }
-
-    #[test]
     fn case_sensitive() {
         let pattern = "duct";
         let content = "\
